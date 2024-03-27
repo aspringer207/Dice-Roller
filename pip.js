@@ -69,12 +69,6 @@ class Pip {
     return Pip(xName, mn, mx, si, st);
   }
 }
-const d4 = new Pip("d4", 1, 4);
-const d6 = new Pip("d6", 1, 6);
-const d8 = new Pip("d8", 1, 8);
-const d10 = new Pip("d10", 0, 9, 10, 1);
-const dPct = new Pip("dPct", 0, 90, 10, 10);
-const d12 = new Pip("d12", 1, 12);
-const d20 = new Pip("d20", 1, 20);
 
-export { Pip, d4, d6, d8, d10, dPct, d12, d20 };
+
+export { Pip };
