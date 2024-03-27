@@ -13,14 +13,50 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
+    <script src="pip.js" type="module"></script>
   </head>
   <body>
     <div id="wrapper" class="wrapper">
       <div id="sidebar" class="sidebar">
-        <nav>
-          <a href="#quick" target="_blank">Quick Roller</a>
-          <a href="#batch" target="_blank">Batch Roller</a>
-          <a href="#custom" target="_blank">Custom Roller</a>
+        <nav class="nav flex-column">
+          <ul>
+            <li>
+              <button
+                id="quick-tab"
+                class="nav-link active"
+                data-bs-toggle="tab"
+                data-bs-target="#quick"
+                role="tab"
+                aria-controls="quick"
+              >
+                Quick Roller
+              </button>
+            </li>
+            <li>
+            <button
+            id="batch-tab"
+            class="nav-link active"
+            data-bs-toggle="tab"
+            data-bs-target="#batch"
+            role="tab"
+            aria-controls="batch"
+          >
+            Batch Roller
+          </button>
+            </li>
+            <li>
+              <button
+            id="custom-tab"
+            class="nav-link active"
+            data-bs-toggle="tab"
+            data-bs-target="#custom"
+            role="tab"
+            aria-controls="custom"
+          >
+            Custom Roller
+          </button>
+            </li>
+          </ul>
         </nav>
         <label id="memory-opt-label">
           Do you want this page to remember information about your rolls?
@@ -28,17 +64,9 @@
         </label>
       </div>
       <div id="main-body" class="main">
-        <section id="quick">
+        <section id="quick" role="tabpanel" aria-labelledby="quick-tab" tabindex="0" class="tab-pane fade show active">
           <h2>Quick Roller</h2>
-          <div>
-            
-            
-            
-            
-            
-            
-            
-          </div>
+          <div></div>
           <table>
             <thead>
               <tr>
@@ -51,7 +79,11 @@
                 <td><button id="d4-btn">Roll</button></td>
                 <td>
                   <span
-                    ><label>Roll Value<input id="d4-output" readonly type="text" /></label
+                    ><label
+                      >Roll Value<input
+                        id="d4-output"
+                        readonly
+                        type="text" /></label
                   ></span>
                 </td>
               </tr>
@@ -60,7 +92,11 @@
                 <td><button id="d6-btn">Roll</button></td>
                 <td>
                   <span
-                    ><label>Roll Value<input id="d6-output" readonly type="text" /></label
+                    ><label
+                      >Roll Value<input
+                        id="d6-output"
+                        readonly
+                        type="text" /></label
                   ></span>
                 </td>
               </tr>
@@ -69,7 +105,11 @@
                 <td><button id="d8-btn">Roll</button></td>
                 <td>
                   <span
-                    ><label>Roll Value<input id="d8-output" readonly type="text" /></label
+                    ><label
+                      >Roll Value<input
+                        id="d8-output"
+                        readonly
+                        type="text" /></label
                   ></span>
                 </td>
               </tr>
@@ -78,16 +118,24 @@
                 <td><button id="d10-btn">Roll</button></td>
                 <td>
                   <span
-                    ><label>Roll Value<input id="d10-output" readonly type="text" /></label
+                    ><label
+                      >Roll Value<input
+                        id="d10-output"
+                        readonly
+                        type="text" /></label
                   ></span>
                 </td>
               </tr>
               <tr>
                 <th>Pct</th>
-                <td><button id="dPct-btn">Roll</button></td>
+                <td><button id="dpct-btn">Roll</button></td>
                 <td>
                   <span
-                    ><label>Roll Value<input id="dPct-output" readonly type="text" /></label
+                    ><label
+                      >Roll Value<input
+                        id="dpct-output"
+                        readonly
+                        type="text" /></label
                   ></span>
                 </td>
               </tr>
@@ -96,7 +144,11 @@
                 <td><button id="d12-btn">Roll</button></td>
                 <td>
                   <span
-                    ><label>Roll Value<input id="d12-output" readonly type="text" /></label
+                    ><label
+                      >Roll Value<input
+                        id="d12-output"
+                        readonly
+                        type="text" /></label
                   ></span>
                 </td>
               </tr>
@@ -105,22 +157,26 @@
                 <td><button id="d20-btn">Roll</button></td>
                 <td>
                   <span
-                    ><label>Roll Value<input id="d20-output" readonly type="text" /></label
+                    ><label
+                      >Roll Value<input
+                        id="d20-output"
+                        readonly
+                        type="text" /></label
                   ></span>
                 </td>
               </tr>
             </tbody>
           </table>
         </section>
-        <section id="batch">
+        <section id="batch" role="tabpanel" aria-labelledby="batch-tab" tabindex="0" class="tab-pane fade" >
           <h2>Batch Roller</h2>
         </section>
-        <section id="custom">
+        <section id="custom" role="tabpanel" aria-labelledby="custom-tab" tabindex="0" class="tab-pane fade">
           <h2>Custom Roller</h2>
         </section>
       </div>
     </div>
 
-    <script src="index.js"></script>
+    <script src="index.js" type="module"></script>
   </body>
 </html>

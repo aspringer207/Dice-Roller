@@ -1,4 +1,5 @@
-class Pip {
+// module "pip.js"
+export default class Pip {
   constructor(name, min = 1, max, sides = max, step = 1) {
     this.name = name;
     this.min = min;
@@ -71,4 +72,4 @@ class Pip {
 }
 
 
-export { Pip };
+
