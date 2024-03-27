@@ -1,0 +1,10 @@
+@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss';
+
+.sidebar{
+    display: flex;
+    box-sizing: border-box;
+    height: 100%;
+    max-width: 25%;
+    background-color: $indigo-800;
+
+}
