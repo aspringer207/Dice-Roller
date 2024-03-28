@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html data-bs-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <title>Dice Roller</title>
@@ -18,10 +18,11 @@
   <body>
     <div id="wrapper" class="wrapper">
       <div id="sidebar" class="sidebar">
+        <div class="col-header">RPG Roller</div>
         <nav>
           <div
             id="tab-list"
-            class="nav nav-tabs flex-column"
+            class="nav nav-tabs"
             aria-orientation="vertical"
             role="tablist"
           >
@@ -96,79 +97,151 @@
           tabindex="0"
           class="tab-pane fade show active"
         >
-          <h2>Quick Roller</h2>
-          <div></div>
-          <table>
-            <thead>
-              <tr>
-                <th>Pips</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th>D4</th>
-                <td><button id="d4-btn">Roll</button></td>
-                <td><label for="d4-output">Value:</label></td>
-                <td>
-                  <input id="d4-output" readonly type="text" />
-                </td>
-              </tr>
-              <tr>
-                <th>D6</th>
-                <td><button id="d6-btn">Roll</button></td>
-                <td><label for="d6-output">Value:</label></td>
-                <td>
-                  <input id="d6-output" readonly type="text" />
-                </td>
-              </tr>
-              <tr>
-                <th>D8</th>
-                <td><button id="d8-btn">Roll</button></td>
-                <td><label for="d8-output">Value:</label></td>
-                <td>
-                  <input id="d8-output" readonly type="text" />
-                </td>
-              </tr>
-              <tr>
-                <th>D10</th>
-                <td><button id="d10-btn">Roll</button></td>
-                <td><label for="d10-output">Value:</label></td>
-                <td>
-                  <input id="d10-output" readonly type="text" />
-                </td>
-              </tr>
-              <tr>
-                <th>Pct</th>
-                <td><button id="dpct-btn">Roll</button></td>
-                <td><label for="dpct-output">Value:</label></td>
-                <td>
-                  <input id="dpct-output" readonly type="text" />
-                </td>
-              </tr>
-              <tr>
-                <th>D12</th>
-                <td><button id="d12-btn">Roll</button></td>
-                <td><label for="d12-output">Value:</label></td>
-                <td>
-                  <input id="d12-output" readonly type="text" />
-                </td>
-              </tr>
-              <tr>
-                <th>D20</th>
-                <td><button id="d20-btn">Roll</button></td>
-                <td><label for="d20-output">Value:</label></td>
-                <td>
-                  <input id="d20-output" readonly type="text" />
-                </td>
-              </tr>
-              <tr>
-                <th>Discarded Roll:</th>
-                <td colspan="3">
-                  <input readonly type="text" id="discard" />
-                </td>
-              </tr>
-            </tbody>
-          </table>
+          <div class="card">
+            <h2 class="display-2">Quick Roller</h2>
+
+            <table class="table table-bordered m-5 container">
+              <thead>
+                <tr>
+                  <th colspan="3">Pips</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>D4</th>
+                  <td>
+                    <button class="btn btn-secondary" id="d4-btn">Roll</button>
+                  </td>
+                  <td>
+                    <div class="form-floating">
+                      <input
+                        id="d4-output"
+                        readonly
+                        type="text"
+                        class="form-control"
+                      />
+                      <label for="d4-output">Value:</label>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th>D6</th>
+                  <td>
+                    <button class="btn btn-secondary" id="d6-btn">Roll</button>
+                  </td>
+                  <td>
+                    <div class="form-floating">
+                      <input
+                        id="d6-output"
+                        readonly
+                        type="text"
+                        class="form-control"
+                      />
+                      <label for="d6-output">Value:</label>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th>D8</th>
+                  <td>
+                    <button class="btn btn-secondary" id="d8-btn">Roll</button>
+                  </td>
+                  <td>
+                    <div class="form-floating">
+                      <input
+                        id="d8-output"
+                        readonly
+                        type="text"
+                        class="form-control"
+                      />
+                      <label for="d8-output">Value:</label>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th>D10</th>
+                  <td>
+                    <button class="btn btn-secondary" id="d10-btn">Roll</button>
+                  </td>
+                  <td>
+                    <div class="form-floating">
+                      <input
+                        id="d10-output"
+                        readonly
+                        type="text"
+                        class="form-control"
+                      />
+                      <label for="d10-output">Value:</label>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th>Pct</th>
+                  <td>
+                    <button class="btn btn-secondary" id="dpct-btn">
+                      Roll
+                    </button>
+                  </td>
+                  <td>
+                    <div class="form-floating">
+                      <input
+                        id="dpct-output"
+                        readonly
+                        type="text"
+                        class="form-control"
+                      />
+                      <label for="dpct-output">Value:</label>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th>D12</th>
+                  <td>
+                    <button class="btn btn-secondary" id="d12-btn">Roll</button>
+                  </td>
+
+                  <td>
+                    <div class="form-floating">
+                      <input
+                        id="d12-output"
+                        readonly
+                        type="text"
+                        class="form-control"
+                      />
+                      <label for="d12-output">Value:</label>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th>D20</th>
+                  <td>
+                    <button class="btn btn-secondary" id="d20-btn">Roll</button>
+                  </td>
+                  <td>
+                    <div class="form-floating">
+                      <input
+                        id="d20-output"
+                        readonly
+                        type="text"
+                        class="form-control"
+                      />
+                      <label for="d20-output">Value:</label>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td colspan="3">
+                    <div>
+                      <h3>Discarded Roll:</h3>
+                      <input readonly type="text" id="discard" />
+                    </div>
+                  </td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
         </section>
         <section
           id="batch"
@@ -177,7 +250,33 @@
           tabindex="0"
           class="tab-pane fade"
         >
-          <h2>Batch Roller</h2>
+          <div class="card">
+            <div class="card-header">
+              <h2 class="display-2">Batch Roller</h2>
+            </div>
+            <div .card-body>
+              <div class="card">
+                <div class="card-header">
+                  <h3>D20</h3>
+                </div>
+                <div class="card-body"></div>
+              </div>
+              <div class="d-flex card list-group list-group-horizontal">
+                <div class="card flex-fill list-group-item">
+                  <div class="list-group">
+                    <div class="list-group-item"></div>
+                    <div class="list-group-item"></div>
+                    <div class="list-group-item"></div>
+                  </div>
+                </div>
+                <div class="card flex-fill list-group-item">
+                  <div class="list-group-item"></div>
+                  <div class="list-group-item"></div>
+                  <div class="list-group-item"></div>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
         <section
           id="custom"
