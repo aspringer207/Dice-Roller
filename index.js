@@ -9,7 +9,7 @@ const dpct = new Pip("dpct", 10, 0, 90, 10);
 const d12 = new Pip("d12", 12);
 const d20 = new Pip("d20", 20);
 const remember = document.getElementById("memory-opt-in").hasAttribute("checked");
-const state = {"adv": document.getElementById("advantage-opt").hasAttribute("checked")}
+const state = {"adv": false}
 
 const buttonObj = {
     "d4":{
@@ -49,15 +49,17 @@ const buttonObj = {
     }
 }
 function buttonHandler(btn){
-            if (document.getElementById("discard").value === "on") {
-                let rollArr = btn.pip.rollAdv(1)
-            document.getElementById(btn.output).value = rollArr[0]
-            document.getElementById("discard").value = rollArr[1]
+            if (state.adv === true) {
+                let rollArr = btn.pip.rollAdv()
+                console.log(dpct.faces())
+            document.getElementById(btn.output).value = rollArr[0][0]
+            document.getElementById("discard").value = rollArr[0][1]
         } else
-    document.getElementById(btn.output).value = btn.pip.roll()
+    {document.getElementById(btn.output).value = btn.pip.roll()}
     
 }
 
+document.getElementById("advantage-opt").addEventListener("input", (event)=>{state.adv = !state.adv; console.log(state.adv)})
 document.getElementById("d4-btn").addEventListener("click", ()=>{buttonHandler(buttonObj.d4)})
 document.getElementById("d6-btn").addEventListener("click", ()=>{buttonHandler(buttonObj.d6)})
 document.getElementById("d8-btn").addEventListener("click", ()=>{buttonHandler(buttonObj.d8)})
