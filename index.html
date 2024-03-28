@@ -18,53 +18,84 @@
   <body>
     <div id="wrapper" class="wrapper">
       <div id="sidebar" class="sidebar">
-        <nav class="nav flex-column">
-          <ul>
-            <li>
-              <button
-                id="quick-tab"
-                class="nav-link active"
-                data-bs-toggle="tab"
-                data-bs-target="#quick"
-                role="tab"
-                aria-controls="quick"
-              >
-                Quick Roller
-              </button>
-            </li>
-            <li>
+        <nav>
+          <div
+            id="tab-list"
+            class="nav nav-tabs flex-column"
+            aria-orientation="vertical"
+            role="tablist"
+          >
             <button
-            id="batch-tab"
-            class="nav-link active"
-            data-bs-toggle="tab"
-            data-bs-target="#batch"
-            role="tab"
-            aria-controls="batch"
-          >
-            Batch Roller
-          </button>
-            </li>
-            <li>
-              <button
-            id="custom-tab"
-            class="nav-link active"
-            data-bs-toggle="tab"
-            data-bs-target="#custom"
-            role="tab"
-            aria-controls="custom"
-          >
-            Custom Roller
-          </button>
-            </li>
-          </ul>
+              id="quick-tab"
+              class="d-flex flex-fill rounded nav-link active"
+              data-bs-toggle="tab"
+              data-bs-target="#quick"
+              role="tab"
+              aria-controls="quick"
+            >
+              Quick Roller
+            </button>
+            <button
+              id="batch-tab"
+              class="d-flex flex-fill rounded nav-link"
+              data-bs-toggle="tab"
+              data-bs-target="#batch"
+              role="tab"
+              aria-controls="batch"
+            >
+              Batch Roller
+            </button>
+            <button
+              id="custom-tab"
+              class="d-flex flex-fill rounded nav-link"
+              data-bs-toggle="tab"
+              data-bs-target="#custom"
+              role="tab"
+              aria-controls="custom"
+            >
+              Custom Roller
+            </button>
+          </div>
         </nav>
-        <label id="memory-opt-label">
-          Do you want this page to remember information about your rolls?
-          <input id="memory-opt-in" type="checkbox" role="switch" />
-        </label>
+        <div class="form-check form-switch">
+          <input
+            id="memory-opt-in"
+            class="form-check-input"
+            aria-label="memory-opt-label"
+            type="checkbox"
+            role="switch"
+          />
+          <label
+            id="memory-opt-label"
+            class="form-check-label"
+            for="memory-opt-in"
+            >Remember my settings</label
+          >
+        </div>
+        <div class="form-check form-switch">
+          <input
+            id="advantage-opt"
+            class="form-check-input"
+            aria-label="advantage-label"
+            type="checkbox"
+            role="switch"
+          />
+          <label
+            id="advantage-label"
+            class="form-check-label"
+            for="advantage-opt"
+            >Use Advantage</label
+          >
+        </div>
       </div>
       <div id="main-body" class="main">
-        <section id="quick" role="tabpanel" aria-labelledby="quick-tab" tabindex="0" class="tab-pane fade show active">
+        <section
+          id="quick"
+          role="tabpanel"
+          aria-labelledby="quick-tab"
+          tabindex="0"
+          class="tab-pane fade show active"
+        >
           <h2>Quick Roller</h2>
           <div></div>
           <table>
@@ -77,101 +108,84 @@
               <tr>
                 <th>D4</th>
                 <td><button id="d4-btn">Roll</button></td>
+                <td><label for="d4-output">Value:</label></td>
                 <td>
-                  <span
-                    ><label
-                      >Roll Value<input
-                        id="d4-output"
-                        readonly
-                        type="text" /></label
-                  ></span>
+                  <input id="d4-output" readonly type="text" />
                 </td>
               </tr>
               <tr>
                 <th>D6</th>
                 <td><button id="d6-btn">Roll</button></td>
+                <td><label for="d6-output">Value:</label></td>
                 <td>
-                  <span
-                    ><label
-                      >Roll Value<input
-                        id="d6-output"
-                        readonly
-                        type="text" /></label
-                  ></span>
+                  <input id="d6-output" readonly type="text" />
                 </td>
               </tr>
               <tr>
                 <th>D8</th>
                 <td><button id="d8-btn">Roll</button></td>
+                <td><label for="d8-output">Value:</label></td>
                 <td>
-                  <span
-                    ><label
-                      >Roll Value<input
-                        id="d8-output"
-                        readonly
-                        type="text" /></label
-                  ></span>
+                  <input id="d8-output" readonly type="text" />
                 </td>
               </tr>
               <tr>
                 <th>D10</th>
                 <td><button id="d10-btn">Roll</button></td>
+                <td><label for="d10-output">Value:</label></td>
                 <td>
-                  <span
-                    ><label
-                      >Roll Value<input
-                        id="d10-output"
-                        readonly
-                        type="text" /></label
-                  ></span>
+                  <input id="d10-output" readonly type="text" />
                 </td>
               </tr>
               <tr>
                 <th>Pct</th>
                 <td><button id="dpct-btn">Roll</button></td>
+                <td><label for="dpct-output">Value:</label></td>
                 <td>
-                  <span
-                    ><label
-                      >Roll Value<input
-                        id="dpct-output"
-                        readonly
-                        type="text" /></label
-                  ></span>
+                  <input id="dpct-output" readonly type="text" />
                 </td>
               </tr>
               <tr>
                 <th>D12</th>
                 <td><button id="d12-btn">Roll</button></td>
+                <td><label for="d12-output">Value:</label></td>
                 <td>
-                  <span
-                    ><label
-                      >Roll Value<input
-                        id="d12-output"
-                        readonly
-                        type="text" /></label
-                  ></span>
+                  <input id="d12-output" readonly type="text" />
                 </td>
               </tr>
               <tr>
                 <th>D20</th>
                 <td><button id="d20-btn">Roll</button></td>
+                <td><label for="d20-output">Value:</label></td>
                 <td>
-                  <span
-                    ><label
-                      >Roll Value<input
-                        id="d20-output"
-                        readonly
-                        type="text" /></label
-                  ></span>
+                  <input id="d20-output" readonly type="text" />
+                </td>
+              </tr>
+              <tr>
+                <th>Discarded Roll:</th>
+                <td colspan="3">
+                  <input readonly type="text" id="discard" />
                 </td>
               </tr>
             </tbody>
           </table>
         </section>
-        <section id="batch" role="tabpanel" aria-labelledby="batch-tab" tabindex="0" class="tab-pane fade" >
+        <section
+          id="batch"
+          role="tabpanel"
+          aria-labelledby="batch-tab"
+          tabindex="0"
+          class="tab-pane fade"
+        >
           <h2>Batch Roller</h2>
         </section>
-        <section id="custom" role="tabpanel" aria-labelledby="custom-tab" tabindex="0" class="tab-pane fade">
+        <section
+          id="custom"
+          role="tabpanel"
+          aria-labelledby="custom-tab"
+          tabindex="0"
+          class="tab-pane fade"
+        >
           <h2>Custom Roller</h2>
         </section>
       </div>

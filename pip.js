@@ -1,29 +1,38 @@
 // module "pip.js"
 export default class Pip {
-  constructor(name, min = 1, max, sides = max, step = 1) {
+  constructor(name, sides, min = 1, max = sides, step = 1) {
     this.name = name;
+    this.sides = sides;
     this.min = min;
     this.max = parseInt(max);
-    this.sides = sides;
+    
     this.step = step;
   }
   faces() {
     const myFaces = [];
+    
+    if (isNaN(this.step)) {
+      let s = this.sides
+      try {
+        CustomPip.customFaces();
+      } catch (s) {
+        for (let i = 0; i < s; i++) {
+          myFaces.push(i);
+        }
+        console.log(
+          "This class requires a numerical step or an array to create faces. You can use the 'CustomPip' extension or 'addCustomFaces' method to provide the pip's faces."
+        );
+      } finally {
+        console.log("Error: invalid step and/or sides.");
+      }
+    }
+
     let face = Number(this.min);
     while (face <= this.max) {
-      myFaces.push(Number(face));
+      let f = face === 0 ? String(face).padStart(2, 0) : String(face);
+      myFaces.push(f);
       face += this.step;
     }
-    return myFaces;
-  }
-  xFaces() {
-    const shortFaces = [];
-    let face = Number(this.min);
-    while (face <= this.max) {
-      shortFaces.push(String(face));
-      face += this.step;
-    }
-    const myFaces = shortFaces.map((x) => String(x).padStart(2, "0"));
     return myFaces;
   }
   rand() {
@@ -31,32 +40,26 @@ export default class Pip {
     let f = this.faces();
     return f[x];
   }
-  roll(adv) {
-    this.faces = this.faces.bind(this);
-    if (adv === 0) {
-      let x = Math.floor(Math.random() * this.max);
-      let f = this.faces();
-      return f[x];
-    } else if (adv === 1) {
-      let x = Math.floor(Math.random() * this.max);
-      let y = Math.floor(Math.random() * this.max);
-      let f = this.faces();
-      f = [...f];
-      let xface = parseInt(f[x]);
-      let yface = parseInt(f[y]);
-      let result = Math.max([xface, yface]);
-      return result;
+  roll(ct = 1) {
+    const results = [];
+    for (let i = 0; i < ct; i++) {
+      results.push(this.rand());
     }
+    return results
   }
-  rolls(r, adv) {
-    let a = adv === true ? 1 : 0;
-    let result = [];
-    for (let i = 0; i < r; i++) {
-      result.push(String(this.roll(a)));
+  rollAdv(ct = 1) {
+    var result;
+    var discard;
+
+    for (let i = 0; i < ct; i++) {
+      let a = Number(this.rand());
+      let b = Number(this.rand());
+      result = Math.max([a, b]);
+      discard = Math.min([a, b])
     }
-    return result;
+    return [result, discard];
   }
-  fromArray(xName, [...arr]) {
+  fromArray(xName, ...arr) {
     let mx = Math.max(arr);
     let mn = Math.min(arr);
     let si = arr.length;
@@ -70,6 +73,3 @@ export default class Pip {
     return Pip(xName, mn, mx, si, st);
   }
 }
-
-
-
