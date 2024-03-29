@@ -1,13 +1,6 @@
-@import 'bootstrap/scss/_variables.scss';
+@import './node_modules/bootstrap/scss/bootstrap.scss';
 
-$primary:       $indigo;
-$secondary:     $gray-600;
-$success:       $teal;
-$info:          $cyan;
-$warning:       $yellow;
-$danger:        $red;
-$light:         $gray-100;
-$dark:          $gray-900;
-
-@import 'bootstrap/scss/bootstrap-reboot.scss';
-
+.btn-bg-indigo{
+    background-color: $indigo;
+    color: whitesmoke;
+}
