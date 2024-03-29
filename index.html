@@ -16,19 +16,19 @@
     <script src="pip.js" type="module"></script>
   </head>
   <body>
-    <div id="wrapper" class="wrapper">
-      <div id="sidebar" class="sidebar">
-        <div class="col-header">RPG Roller</div>
+    <div id="wrapper" class="d-flex container-fluid wrapper">
+      <div id="sidebar" class="d-flex flex-column col-2 position-fixed">
+        <div class="col-header display-5 bg-warning text-dark ">RPG Roller</div>
         <nav>
-          <div
+          <ul
+            class="nav nav-tabs list-group"
             id="tab-list"
-            class="nav nav-tabs"
             aria-orientation="vertical"
             role="tablist"
-          >
+          ><li class="list-group-item nav-item">
             <button
-              id="quick-tab"
-              class="d-flex flex-fill rounded nav-link active"
+              id="quick-tab nav-"
+              class="rounded nav-link active"
               data-bs-toggle="tab"
               data-bs-target="#quick"
               role="tab"
@@ -36,27 +36,29 @@
             >
               Quick Roller
             </button>
-            <button
+          </li>
+            
+            <li class="list-group-item nav-item"><button
               id="batch-tab"
-              class="d-flex flex-fill rounded nav-link"
+              class="rounded nav-link"
               data-bs-toggle="tab"
               data-bs-target="#batch"
               role="tab"
               aria-controls="batch"
             >
               Batch Roller
-            </button>
-            <button
+            </button></li>
+            <li class="list-group-item nav-item"><button
               id="custom-tab"
-              class="d-flex flex-fill rounded nav-link"
+              class="rounded nav-link"
               data-bs-toggle="tab"
               data-bs-target="#custom"
               role="tab"
               aria-controls="custom"
             >
               Custom Roller
-            </button>
-          </div>
+            </button></li>
+          </ul>
         </nav>
         <div class="form-check form-switch">
           <input
@@ -89,7 +91,7 @@
           >
         </div>
       </div>
-      <div id="main-body" class="main">
+      <div id="main-body" class="d-flex main flex-column col-10 position-relative end-20">
         <section
           id="quick"
           role="tabpanel"
