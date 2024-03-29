@@ -58,7 +58,20 @@ function buttonHandler(btn){
     {document.getElementById(btn.output).value = btn.pip.roll()}
     
 }
+function rangeHandler(event){
+    let val = event.target.value
+    const advRange = document.getElementById("batch-adv-range")
+    const advNum = document.getElementById("batch-adv-num")
+    advNum.value = val
+}
+function maxHandler(event){
+    let selectedMax = event.target.value
+    let advRange = document.getElementById("batch-adv-range")
+    advRange.setAttribute("max", selectedMax)
 
+}
+document.getElementById("batch-d20-count")
+document.getElementById("batch-adv-num").addEventListener("change", (event)=>{rangeHandler(event)})
 document.getElementById("advantage-opt").addEventListener("input", (event)=>{state.adv = !state.adv; console.log(state.adv)})
 document.getElementById("d4-btn").addEventListener("click", ()=>{buttonHandler(buttonObj.d4)})
 document.getElementById("d6-btn").addEventListener("click", ()=>{buttonHandler(buttonObj.d6)})
