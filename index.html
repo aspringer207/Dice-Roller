@@ -15,49 +15,61 @@
     ></script>
     <script src="pip.js" type="module"></script>
   </head>
+
   <body>
     <div id="wrapper" class="d-flex container-fluid wrapper">
       <div id="sidebar" class="d-flex flex-column col-2 position-fixed sidebar">
-        <div class="col-header display-5 bg-warning text-dark ">RPG Roller</div>
+        <div class="col-header display-5 bg-warning text-dark">RPG Roller</div>
         <nav>
           <ul
             class="nav nav-tabs list-group"
             id="tab-list"
             aria-orientation="vertical"
             role="tablist"
-          ><li class="list-group-item nav-item">
-            <button
-              id="quick-tab nav-"
-              class="rounded nav-link active"
-              data-bs-toggle="tab"
-              data-bs-target="#quick"
-              role="tab"
-              aria-controls="quick"
-            >
-              Quick Roller
-            </button>
-          </li>
-            
-            <li class="list-group-item nav-item"><button
-              id="batch-tab"
-              class="rounded nav-link"
-              data-bs-toggle="tab"
-              data-bs-target="#batch"
-              role="tab"
-              aria-controls="batch"
-            >
-              Batch Roller
-            </button></li>
-            <li class="list-group-item nav-item"><button
-              id="custom-tab"
-              class="rounded nav-link"
-              data-bs-toggle="tab"
-              data-bs-target="#custom"
-              role="tab"
-              aria-controls="custom"
-            >
-              Custom Roller
-            </button></li>
+          >
+            <li class="list-group-item nav-item" role="presentation">
+              <button
+                id="quick-tab nav-"
+                type="button"
+                class="rounded nav-link active"
+                data-bs-toggle="tab"
+                data-bs-target="#quick"
+                role="tab"
+                aria-controls="quick"
+                aria-selected="false"
+              >
+                Quick Roller
+              </button>
+            </li>
+
+            <li class="list-group-item nav-item" role="presentation">
+              <button
+                id="batch-tab"
+                type="button"
+                class="rounded nav-link"
+                data-bs-toggle="tab"
+                data-bs-target="#batch"
+                role="tab"
+                aria-controls="batch"
+                aria-selected="false"
+              >
+                Batch Roller
+              </button>
+            </li>
+            <li class="list-group-item nav-item" role="presentation">
+              <button
+                id="custom-tab"
+                type="button"
+                class="rounded nav-link"
+                data-bs-toggle="tab"
+                data-bs-target="#custom"
+                role="tab"
+                aria-controls="custom"
+                aria-selected="false"
+              >
+                Custom Roller
+              </button>
+            </li>
           </ul>
         </nav>
         <div class="form-check form-switch">
@@ -112,7 +124,9 @@
                 <tr>
                   <th>D4</th>
                   <td>
-                    <button class="btn" id="d4-btn">Roll</button>
+                    <button class="btn btn-dark bg-indigo-700" id="d4-btn">
+                      Roll
+                    </button>
                   </td>
                   <td>
                     <div class="form-floating">
@@ -129,7 +143,9 @@
                 <tr>
                   <th>D6</th>
                   <td>
-                    <button class="btn btn-secondary" id="d6-btn">Roll</button>
+                    <button class="btn btn-dark bg-indigo-700" id="d6-btn">
+                      Roll
+                    </button>
                   </td>
                   <td>
                     <div class="form-floating">
@@ -146,7 +162,9 @@
                 <tr>
                   <th>D8</th>
                   <td>
-                    <button class="btn btn-secondary" id="d8-btn">Roll</button>
+                    <button class="btn btn-dark bg-indigo-700" id="d8-btn">
+                      Roll
+                    </button>
                   </td>
                   <td>
                     <div class="form-floating">
@@ -163,7 +181,9 @@
                 <tr>
                   <th>D10</th>
                   <td>
-                    <button class="btn btn-secondary" id="d10-btn">Roll</button>
+                    <button class="btn btn-dark bg-indigo-700" id="d10-btn">
+                      Roll
+                    </button>
                   </td>
                   <td>
                     <div class="form-floating">
@@ -180,7 +200,7 @@
                 <tr>
                   <th>Pct</th>
                   <td>
-                    <button class="btn btn-secondary" id="dpct-btn">
+                    <button class="btn btn-dark bg-indigo-700" id="dpct-btn">
                       Roll
                     </button>
                   </td>
@@ -199,7 +219,9 @@
                 <tr>
                   <th>D12</th>
                   <td>
-                    <button class="btn btn-secondary" id="d12-btn">Roll</button>
+                    <button class="btn btn-dark bg-indigo-700" id="d12-btn">
+                      Roll
+                    </button>
                   </td>
 
                   <td>
@@ -217,7 +239,9 @@
                 <tr>
                   <th>D20</th>
                   <td>
-                    <button class="btn btn-secondary" id="d20-btn">Roll</button>
+                    <button class="btn btn-dark bg-indigo-700" id="d20-btn">
+                      Roll
+                    </button>
                   </td>
                   <td>
                     <div class="form-floating">
@@ -266,15 +290,15 @@
               <div class="d-flex card list-group list-group-horizontal">
                 <div class="card flex-fill list-group-item">
                   <div class="list-group">
-                    <div class="list-group-item"></div>
-                    <div class="list-group-item"></div>
-                    <div class="list-group-item"></div>
+                    <div class="list-group-item"><h3>D4</h3></div>
+                    <div class="list-group-item"><h3>D6</h3></div>
+                    <div class="list-group-item"><h3>D8</h3></div>
                   </div>
                 </div>
                 <div class="card flex-fill list-group-item">
-                  <div class="list-group-item"></div>
-                  <div class="list-group-item"></div>
-                  <div class="list-group-item"></div>
+                  <div class="list-group-item"><h3>D10</h3></div>
+                  <div class="list-group-item"><h3>Pct</h3></div>
+                  <div class="list-group-item"><h3>D12</h3></div>
                 </div>
               </div>
             </div>
