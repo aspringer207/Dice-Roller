@@ -299,7 +299,7 @@
                   <span class="input-group text-light">
                     <span class="input-group-text bg-indigo-400">d20</span>
                     <span class="input-group-text">Roll Count</span>
-                    <select>
+                    <select id="batch-d20-count">
                       <option value="1" label="1" />
                       <option label="2" value="2" />
                       <option label="3" value="3" />
@@ -314,8 +314,8 @@
                       <option label="12" value="12" />
                     </select>
                     <span class="input-group-text">
-                      <label class="form-range-label">Rolls with Advantage: </label>
-                      <input id="batch-adv-range" max="12" min="0" step="1" type="range" class="form-range mx-1 mt-1" />
+                      <label for="batch-adv-range" class="form-range-label">Rolls with Advantage: </label>
+                      <input id="batch-adv-range" max="12" min="0" step="1" type="range" value="0" class="form-range mx-1 mt-1" />
                       <input id="batch-adv-num" type="text" class="form-control-plaintext range-number" readonly value="0" />
                       
                     </span>
@@ -328,7 +328,7 @@
                   <span class="input-group text-light">
                     <span class="input-group-text bg-indigo-400">d4</span>
                     <span class="input-group-text">Roll Count</span>
-                    <select>
+                    <select id="batch-d4-count">
                       <option value="1" label="1" />
                       <option label="2" value="2" />
                       <option label="3" value="3" />
@@ -351,7 +351,7 @@
                   <span class="input-group text-light">
                     <span class="input-group-text bg-indigo-400">d6</span>
                     <span class="input-group-text">Roll Count</span>
-                    <select>
+                    <select id="batch-d6-count">
                       <option value="1" label="1" />
                       <option label="2" value="2" />
                       <option label="3" value="3" />
@@ -374,7 +374,7 @@
                   <span class="input-group text-light">
                     <span class="input-group-text bg-indigo-400">d8</span>
                     <span class="input-group-text">Roll Count</span>
-                    <select>
+                    <select id="batch-d8-count">
                       <option value="1" label="1" />
                       <option label="2" value="2" />
                       <option label="3" value="3" />
@@ -397,7 +397,7 @@
                   <span class="input-group text-light">
                     <span class="input-group-text bg-indigo-400">d10</span>
                     <span class="input-group-text">Roll Count</span>
-                    <select>
+                    <select id="batch-d10-count">
                       <option value="1" label="1" />
                       <option label="2" value="2" />
                       <option label="3" value="3" />
@@ -420,7 +420,7 @@
                   <span class="input-group text-light">
                     <span class="input-group-text bg-indigo-400">Pct</span>
                     <span class="input-group-text">Roll Count</span>
-                    <select>
+                    <select id="batch-pct-count">
                       <option value="1" label="1" />
                       <option label="2" value="2" />
                       <option label="3" value="3" />
@@ -443,7 +443,7 @@
                   <span class="input-group text-light">
                     <span class="input-group-text bg-indigo-400">d12</span>
                     <span class="input-group-text">Roll Count</span>
-                    <select>
+                    <select id="batch-d12-count">
                       <option value="1" label="1" />
                       <option label="2" value="2" />
                       <option label="3" value="3" />

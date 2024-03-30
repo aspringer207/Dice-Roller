@@ -65,14 +65,15 @@ function rangeHandler(event){
     advNum.value = val
 }
 function maxHandler(event){
+    console.log(event)
     let selectedMax = event.target.value
     let advRange = document.getElementById("batch-adv-range")
     advRange.setAttribute("max", selectedMax)
 
 }
-document.getElementById("batch-d20-count")
-document.getElementById("batch-adv-num").addEventListener("change", (event)=>{rangeHandler(event)})
-document.getElementById("advantage-opt").addEventListener("input", (event)=>{state.adv = !state.adv; console.log(state.adv)})
+document.getElementById("batch-d20-count").addEventListener("select", (event)=>{maxHandler(event)})
+document.getElementById("batch-adv-num").addEventListener("input", (event)=>{rangeHandler(event)})
+document.getElementById("advantage-opt").addEventListener("input", ()=>{state.adv = !state.adv; console.log(state.adv)})
 document.getElementById("d4-btn").addEventListener("click", ()=>{buttonHandler(buttonObj.d4)})
 document.getElementById("d6-btn").addEventListener("click", ()=>{buttonHandler(buttonObj.d6)})
 document.getElementById("d8-btn").addEventListener("click", ()=>{buttonHandler(buttonObj.d8)})
