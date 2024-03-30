@@ -5,11 +5,25 @@
     border: 3px solid whitesmoke;
 
 };
-
+body{
+    display: grid;
+    grid-template-columns: 1fr, 5fr;
+}
 .range-number{
     width: 4ch !important;
     text-align: center;
 }
 section{
     display:flex;
+}
+.sidebar{
+    grid-column:1 / 2;
+    background-color: $indigo-900;
+    height: 100%;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+.main{
+    grid-column: 2 / 3;
+    
 }
