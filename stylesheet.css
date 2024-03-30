@@ -21541,5 +21541,10 @@ progress {
 }
 
 .range-number {
-  width: calc(2ch + 1em);
+  width: 4ch !important;
+  text-align: center;
+}
+
+section {
+  display: flex;
 }/*# sourceMappingURL=stylesheet.css.map */

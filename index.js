@@ -60,19 +60,23 @@ function buttonHandler(btn){
 }
 function rangeHandler(event){
     let val = event.target.value
+    console.log(val)
     const advRange = document.getElementById("batch-adv-range")
     const advNum = document.getElementById("batch-adv-num")
-    advNum.value = val
+    advNum.setAttribute("value", event.target.value)
 }
 function maxHandler(event){
-    console.log(event)
     let selectedMax = event.target.value
+    let countSelect = document.getElementById("batch-d20-count");
+    let selectedOption = countSelect.selectedIndex;
+    console.log(selectedOption)
     let advRange = document.getElementById("batch-adv-range")
-    advRange.setAttribute("max", selectedMax)
+    advRange.setAttribute("max", selectedOption)
+    
 
 }
-document.getElementById("batch-d20-count").addEventListener("select", (event)=>{maxHandler(event)})
-document.getElementById("batch-adv-num").addEventListener("input", (event)=>{rangeHandler(event)})
+document.getElementById("batch-d20-count").addEventListener("change", (event)=>{maxHandler(event)})
+document.getElementById("batch-adv-range").addEventListener("change", (event)=>{rangeHandler(event)})
 document.getElementById("advantage-opt").addEventListener("input", ()=>{state.adv = !state.adv; console.log(state.adv)})
 document.getElementById("d4-btn").addEventListener("click", ()=>{buttonHandler(buttonObj.d4)})
 document.getElementById("d6-btn").addEventListener("click", ()=>{buttonHandler(buttonObj.d6)})
