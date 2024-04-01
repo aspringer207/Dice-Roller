@@ -21535,9 +21535,11 @@ progress {
   content: "— ";
 }
 
-body {
+.wrapper {
+  display: flex;
+  flex-direction: row;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   padding: 0;
   margin: 0;
   overflow: hidden;
@@ -21551,15 +21553,30 @@ body {
 }
 
 .sidebar {
-  height: 100vh;
+  height: 100%;
   overflow: hidden;
   flex-wrap: nowrap;
+  background-color: #140330;
 }
 
 .main {
+  display: flex;
+  flex-direction: column;
   overflow-x: hidden;
   overflow-y: scroll;
   flex-wrap: nowrap;
   padding: 0;
   margin: 0;
+}
+
+.pip-label {
+  width: 7rem;
+}
+
+.quick-btn {
+  width: 5rem;
+}
+
+.discard-label {
+  width: 12rem;
 }/*# sourceMappingURL=stylesheet.css.map */

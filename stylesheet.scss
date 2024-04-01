@@ -1,8 +1,10 @@
-@import './imports.scss';
+@import "./imports.scss";
 
-body {
+.wrapper {
+    display: flex;
+    flex-direction: row;
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     padding: 0;
     margin: 0;
     overflow: hidden;
@@ -10,20 +12,31 @@ body {
     box-sizing: border-box;
 }
 
-.border-pop{
+.border-pop {
     border-inline: 2px solid #000;
     border: 3px solid whitesmoke;
-
-};
-.sidebar{
-    height: 100vh;
+}
+.sidebar {
+    height: 100%;
     overflow: hidden;
     flex-wrap: nowrap;
+    background-color: $indigo-900;
 }
-.main{
+.main {
+    display: flex;
+    flex-direction: column;
     overflow-x: hidden;
     overflow-y: scroll;
     flex-wrap: nowrap;
     padding: 0;
     margin: 0;
+}
+.pip-label {
+    width: 7rem;
+}
+.quick-btn{
+    width: 5rem;
+}
+.discard-label{
+    width: 12rem;
 }
