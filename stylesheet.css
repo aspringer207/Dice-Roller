@@ -21579,4 +21579,10 @@ progress {
 
 .discard-label {
   width: 12rem;
+}
+
+iframe {
+  width: 60vw;
+  height: 90vh;
+  margin: auto;
 }/*# sourceMappingURL=stylesheet.css.map */
