@@ -1,5 +1,5 @@
 import {d4, d6, d8, d10, dpct, d12, d20} from "./allpips.js"
-export default btnObj = {
+export const btnObj = {
     "d4":{
         pip: d4,
         button: "d4-btn",

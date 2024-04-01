@@ -1,4 +1,4 @@
-import {btnObj} from './btnObj'
+import {btnObj} from './btnObj.js'
 
 function buttonHandler(btn){
     if (state.adv === true) {
@@ -10,8 +10,7 @@ function buttonHandler(btn){
 {document.getElementById(btn.output).value = btn.pip.roll()}
 
 }
-const state = {"adv": false}
-document.getElementById("advantage-opt").addEventListener("input", ()=>{state.adv = !state.adv; console.log(state.adv)})
+
 document.getElementById("d4-btn").addEventListener("click", ()=>{buttonHandler(btnObj.d4)})
 document.getElementById("d6-btn").addEventListener("click", ()=>{buttonHandler(btnObj.d6)})
 document.getElementById("d8-btn").addEventListener("click", ()=>{buttonHandler(btnObj.d8)})

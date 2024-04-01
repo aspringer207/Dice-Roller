@@ -1,4 +1,4 @@
-import Pip from "./pip";
+import Pip from "./pip.js";
 
 export const d4 = new Pip("d4", 4);
 export const d6 = new Pip("d6", 6);

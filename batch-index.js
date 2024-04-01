@@ -18,5 +18,5 @@ function maxHandler(event){
 
 }
 
-getElementById("batch-d20-count").addEventListener("change", (event)=>{maxHandler(event)})
-getElementById("batch-adv-range").addEventListener("change", (event)=>{rangeHandler(event)})
+document.getElementById("batch-d20-count").addEventListener("change", (event)=>{maxHandler(event)})
+document.getElementById("batch-adv-range").addEventListener("change", (event)=>{rangeHandler(event)})
