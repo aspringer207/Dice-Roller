@@ -11,7 +11,7 @@ function buttonHandler(btn){
 {document.getElementById(btn.output).value = btn.pip.roll()}
 
 }
-
+document.getElementById("advantage-opt").addEventListener("change", ()=>{state.adv = !state.adv; console.log(state.adv)})
 document.getElementById("d4-btn").addEventListener("click", ()=>{buttonHandler(btnObj.d4)})
 document.getElementById("d6-btn").addEventListener("click", ()=>{buttonHandler(btnObj.d6)})
 document.getElementById("d8-btn").addEventListener("click", ()=>{buttonHandler(btnObj.d8)})
