@@ -1,4 +1,5 @@
 import {btnObj} from './btnObj.js'
+import {state} from './index.js'
 
 function buttonHandler(btn){
     if (state.adv === true) {
