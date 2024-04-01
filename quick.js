@@ -2,7 +2,7 @@ import {btnObj} from './btnObj.js'
 import {state} from './index.js'
 
 function buttonHandler(btn){
-    if (state.adv === true) {
+    if (state.adv === true && btn === btnObj.d20) {
         let rollArr = btn.pip.rollAdv()
         console.log(dpct.faces())
     document.getElementById(btn.output).value = rollArr[0][0]
