@@ -40,6 +40,18 @@ export default class Pip {
     }
     return results;
   }
+  rollA(ct=1){
+    const results = [];
+    for (let i = 0; i < ct; i++) {
+      let v1 = this.rand();
+      let v2 = this.rand();
+      let result = Math.max(v1, v2);
+      let discard = Math.min(v1, v2)
+      results.push(result)
+    }
+    return results;
+
+  }
   fromArray(xName, ...arr) {
     let mx = Math.max(arr);
     let mn = Math.min(arr);
