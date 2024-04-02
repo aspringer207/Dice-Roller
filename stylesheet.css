@@ -21599,15 +21599,7 @@ iframe {
 }
 
 .batch-pip-label {
-  width: 7rem;
-}
-
-.range-number {
-  max-width: 8ch !important;
-}
-
-.batch-select-input {
-  max-width: 4ch !important;
+  width: 4rem;
 }
 
 .batch-input-group {
