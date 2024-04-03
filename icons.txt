@@ -1,0 +1,15 @@
+bi-hexagon-half
+bi-triangle-half
+bi-dice-6
+bi-diamond-half
+bi-pentagon-half
+bi-percent
+bi-octagon-half
+\f2f0
+\f41c
+\f4ab
+\f4cd
+\f583
+\f5e4
+\f2fd
+\f4d1
