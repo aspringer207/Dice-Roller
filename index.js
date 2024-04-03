@@ -1,3 +1,11 @@
+const batchInputD4 = document.getElementById("batch-d4-count");
+const batchInputD6 = document.getElementById("batch-d6-count");
+const batchInputD8 = document.getElementById("batch-d8-count");
+const batchInputD10 = document.getElementById("batch-d10-count");
+const batchInputPct = document.getElementById("batch-pct-count");
+const batchInputD12 = document.getElementById("batch-d12-count");
+const batchInputD20 = document.getElementById("batch-d20-count");
+
 class Pip {
     constructor(name, sides, min = 1, max = sides, step = 1) {
       this.name = name;
@@ -70,65 +78,50 @@ class Pip {
 const btnObj = {
     "d4":{
         pip: d4,
-        button: "d4-btn",
-        output: "d4-output",
+        button: "quick-d4-btn",
+        output: "quick-d4-output",
         roll: ()=>d4.roll()
     },
     "d6":{
         pip: d6,
-        button: "d6-btn",
-        output: "d6-output",
+        button: "quick-d6-btn",
+        output: "quick-d6-output",
         roll: ()=>d6.roll()
     },
     "d8":{
         pip: d8,
-        button: "d8-btn",
-        output: "d8-output",
+        button: "quick-d8-btn",
+        output: "quick-d8-output",
         roll: ()=>d8.roll()
     },
     "d10":{
         pip: d10,
-        button: "d10-btn",
-        output: "d10-output",
+        button: "quick-d10-btn",
+        output: "quick-d10-output",
         roll: ()=>d10.roll()
     },
     "dpct":{
         pip: dpct,
-        button: "dpct-btn",
-        output: "dpct-output",
+        button: "quick-dpct-btn",
+        output: "quick-dpct-output",
         roll: ()=>dpct.roll()
     },
     "d12":{
         pip: d12,
-        button: "d12-btn",
-        output: "d12-output",
+        button: "quick-d12-btn",
+        output: "quick-d12-output",
         roll: ()=>d12.roll()
     },
     "d20":{
         pip: d20,
-        button: "d20-btn",
-        output: "d20-output",
+        button: "quick-d20-btn",
+        output: "quick-d20-output",
         roll: ()=>d20.roll()
     }
 }
 
   
-const output = document.getElementById("batch-output");
-const inputD4 = document.getElementById("batch-d4-count");
-const inputD6 = document.getElementById("batch-d6-count");
-const inputD8 = document.getElementById("batch-d8-count");
-const inputD10 = document.getElementById("batch-d10-count");
-const inputPct = document.getElementById("batch-pct-count");
-const inputD12 = document.getElementById("batch-d12-count");
-const inputD20 = document.getElementById("batch-d20-count");
-let countD4 = inputD4.selectedIndex;
-let countD6 = inputD4.selectedIndex;
-let countD8 = inputD8.selectedIndex;
-let countD10 = inputD10.selectedIndex;
-let countPct = inputPct.selectedIndex;
-let countD12 = inputD12.selectedIndex;
-let countD20 = inputD20.selectedIndex;
-let advD20 = document.getElementById("batch-adv-num");
+
 const rolls = {
   d4: 0,
   d6: 0,
@@ -181,13 +174,11 @@ function rollHandler() {
 function rangeHandler(event) {
   let val = event.target.value;
   console.log(val);
-  const advRange = document.getElementById("batch-adv-range");
   const advNum = document.getElementById("batch-adv-num");
   advNum.setAttribute("value", event.target.value);
   updateD20R(event.target.value);
 }
 function maxHandler(event) {
-  let selectedMax = event.target.value;
   let countSelect = document.getElementById("batch-d20-count");
   let selectedOption = countSelect.selectedIndex;
   console.log(selectedOption);
@@ -214,25 +205,25 @@ document.getElementById("advantage-opt").addEventListener("change", () => {
   state.adv = !state.adv;
   console.log(state.adv);
 });
-document.getElementById("d4-btn").addEventListener("click", () => {
+document.getElementById("quick-d4-btn").addEventListener("click", () => {
   buttonHandler(btnObj.d4);
 });
-document.getElementById("d6-btn").addEventListener("click", () => {
+document.getElementById("quick-d6-btn").addEventListener("click", () => {
   buttonHandler(btnObj.d6);
 });
-document.getElementById("d8-btn").addEventListener("click", () => {
+document.getElementById("quick-d8-btn").addEventListener("click", () => {
   buttonHandler(btnObj.d8);
 });
-document.getElementById("d10-btn").addEventListener("click", () => {
+document.getElementById("quick-d10-btn").addEventListener("click", () => {
   buttonHandler(btnObj.d10);
 });
-document.getElementById("dpct-btn").addEventListener("click", () => {
+document.getElementById("quick-dpct-btn").addEventListener("click", () => {
   buttonHandler(btnObj.dpct);
 });
-document.getElementById("d12-btn").addEventListener("click", () => {
+document.getElementById("quick-d12-btn").addEventListener("click", () => {
   buttonHandler(btnObj.d12);
 });
-document.getElementById("d20-btn").addEventListener("click", () => {
+document.getElementById("quick-d20-btn").addEventListener("click", () => {
   d20Handler(btnObj.d20);
 });
 document
@@ -245,25 +236,25 @@ document
   .addEventListener("change", (event) => {
     rangeHandler(event);
   });
-inputD4.addEventListener("change", (event) => {
+batchInputD4.addEventListener("change", (event) => {
   rolls.d4 = updateCount(event);
 });
-inputD6.addEventListener("change", (event) => {
+batchInputD6.addEventListener("change", (event) => {
   rolls.d6 = updateCount(event);
 });
-inputD8.addEventListener("change", (event) => {
+batchInputD8.addEventListener("change", (event) => {
   rolls.d8 = updateCount(event);
 });
-inputD10.addEventListener("change", (event) => {
+batchInputD10.addEventListener("change", (event) => {
   rolls.d10 = updateCount(event);
 });
-inputPct.addEventListener("change", (event) => {
+batchInputPct.addEventListener("change", (event) => {
   rolls.dPct = updateCount(event);
 });
-inputD12.addEventListener("change", (event) => {
+batchInputD12.addEventListener("change", (event) => {
   rolls.d12 = updateCount(event);
 });
-inputD20.addEventListener("change", (event) => {
+batchInputD20.addEventListener("change", (event) => {
   updateD20S(event);
 });
 document.getElementById("batch-roll-btn").addEventListener("click", (event) => {
