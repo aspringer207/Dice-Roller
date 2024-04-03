@@ -6,7 +6,7 @@
 @font-face {
   font-display: block;
   font-family: "bootstrap-icons";
-  src: url("./fonts/bootstrap-icons.woff2?24e3eb84d0bcaf83d77f904c78ac1f47") format("woff2"), url("./fonts/bootstrap-icons.woff?24e3eb84d0bcaf83d77f904c78ac1f47") format("woff");
+  src: url(./node_modules\b ootstrap-icons\f ont\f onts\b ootstrap-icons.woff2) format("woff2"), url(node_modules\b ootstrap-icons\f ont\f onts\b ootstrap-icons.woff) format("woff");
 }
 .bi::before,
 [class^=bi-]::before,
@@ -97,4 +97,12 @@
 
 .bi-triangle-half::before {
   content: "\f5e4";
+}
+
+.bi-star::before {
+  content: "\f589";
+}
+
+.bi-trash3::before {
+  content: "\f78b";
 }/*# sourceMappingURL=mybootstrap-icons.css.map */

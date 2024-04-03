@@ -6200,7 +6200,7 @@
 @font-face {
   font-display: block;
   font-family: "bootstrap-icons";
-  src: url("./fonts/bootstrap-icons.woff2?24e3eb84d0bcaf83d77f904c78ac1f47") format("woff2"), url("./fonts/bootstrap-icons.woff?24e3eb84d0bcaf83d77f904c78ac1f47") format("woff");
+  src: url(./node_modules\b ootstrap-icons\f ont\f onts\b ootstrap-icons.woff2) format("woff2"), url(node_modules\b ootstrap-icons\f ont\f onts\b ootstrap-icons.woff) format("woff");
 }
 .bi::before,
 [class^=bi-]::before,
@@ -6291,6 +6291,14 @@
 
 .bi-triangle-half::before {
   content: "\f5e4";
+}
+
+.bi-star::before {
+  content: "\f589";
+}
+
+.bi-trash3::before {
+  content: "\f78b";
 }
 
 .accordion {
@@ -6918,6 +6926,33 @@
   --bs-btn-padding-x: 0.5rem;
   --bs-btn-font-size: 0.875rem;
   --bs-btn-border-radius: var(--bs-border-radius-sm);
+}
+
+.badge {
+  --bs-badge-padding-x: 0.65em;
+  --bs-badge-padding-y: 0.35em;
+  --bs-badge-font-size: 0.75em;
+  --bs-badge-font-weight: 700;
+  --bs-badge-color: #fff;
+  --bs-badge-border-radius: var(--bs-border-radius);
+  display: inline-block;
+  padding: var(--bs-badge-padding-y) var(--bs-badge-padding-x);
+  font-size: var(--bs-badge-font-size);
+  font-weight: var(--bs-badge-font-weight);
+  line-height: 1;
+  color: var(--bs-badge-color);
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: var(--bs-badge-border-radius);
+}
+.badge:empty {
+  display: none;
+}
+
+.btn .badge {
+  position: relative;
+  top: -1px;
 }
 
 .card {
@@ -12130,4 +12165,8 @@ iframe {
 .batch-output {
   font-size: 24pt;
   height: 72pt !important;
+}
+
+.icon-label {
+  min-height: 84px;
 }/*# sourceMappingURL=stylesheet.css.map */

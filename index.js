@@ -73,7 +73,15 @@ class Pip {
       return Pip(xName, mn, mx, si, st);
     }
   }
+const d4 = new Pip("d4", 4, 1, 4, 1)
+const d6 = new Pip("d6", 6, 1, 6, 1)
+const d8 = new Pip("d8", 8, 1, 8, 1)
+const d10 = new Pip("d10", 10, 0, 9, 1)
+const dPct = new Pip("dPct", 10, 0, 90, 10)
+const d12 = new Pip("d12", 12, 1, 12, 1)
+const d20 = new Pip("d20", 20, 1, 20, 1)
 
+const state = {adv: false}
 
 const btnObj = {
     "d4":{
@@ -101,7 +109,7 @@ const btnObj = {
         roll: ()=>d10.roll()
     },
     "dpct":{
-        pip: dpct,
+        pip: dPct,
         button: "quick-dpct-btn",
         output: "quick-dpct-output",
         roll: ()=>dpct.roll()
@@ -158,7 +166,7 @@ function rollHandler() {
   let r6 = rollData[1] === 0 ? "" : `\n d6: ${d6.roll(rollData[1])}`;
   let r8 = rollData[2] === 0 ? "" : `\n d8: ${d8.roll(rollData[2])}`;
   let r10 = rollData[3] === 0 ? "" : `\n d10: ${d10.roll(rollData[3])}`;
-  let rPct = rollData[4] === 0 ? "" : `\n dPct: ${dpct.roll(rollData[4])}`;
+  let rPct = rollData[4] === 0 ? "" : `\n dPct: ${dPct.roll(rollData[4])}`;
   let r12 = rollData[5] === 0 ? "" : `\n d12: ${d12.roll(rollData[5])}`;
   let r20R =
     d20Rolls.reg === 0 ? "" : `\n d20(no advantage): ${d20.roll(d20Rolls.reg)}`;
@@ -167,7 +175,7 @@ function rollHandler() {
       ? ""
       : `\n d20(with advantage): ${d20.rollA(d20Rolls.adv)}`;
   let resultArr = [r4, r6, r8, r10, rPct, r12, r20R, r20A];
-  document.getElementById("batch-output").textContent = resultArr.filter(
+  document.getElementById("batch-roll-output").textContent = resultArr.filter(
     (x) => x != ""
   );
 }
@@ -185,8 +193,6 @@ function maxHandler(event) {
   let advRange = document.getElementById("batch-adv-range");
   advRange.setAttribute("max", selectedOption);
 }
-import { btnObj } from "./btnObj.js";
-import { state } from "./index.js";
 
 function buttonHandler(btn) {
   document.getElementById(btn.output).value = btn.pip.roll();

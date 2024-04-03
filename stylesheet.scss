@@ -51,6 +51,8 @@ $utilities: map-merge(
 @import "./node_modules/bootstrap/scss/_accordion.scss";
 @import "./node_modules/bootstrap/scss/_button-group.scss";
 @import "./node_modules/bootstrap/scss/_buttons.scss";
+
+@import "./node_modules/bootstrap/scss/_badge.scss";
 @import "./node_modules/bootstrap/scss/_card.scss";
 @import "./node_modules/bootstrap/scss/_close.scss";
 @import "./node_modules/bootstrap/scss/_containers.scss";
@@ -137,4 +139,7 @@ iframe{
 .batch-output{
     font-size: 24pt;
     height: 72pt !important;
+}
+.icon-label{
+  min-height: 84px;
 }
