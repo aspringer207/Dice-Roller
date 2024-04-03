@@ -1,4 +1,76 @@
-@import "./imports.scss";
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/variables-dark";
+@import "node_modules/bootstrap/scss/maps";
+@import "node_modules/bootstrap/scss/mixins";
+@import "node_modules/bootstrap/scss/utilities";
+$all-colors: map-merge-multiple($blues, $indigos, $purples, $pinks, $reds, $oranges, $yellows, $greens, $teals, $cyans);
+
+$utilities: map-merge(
+  $utilities,
+  (
+    "color": map-merge(
+      map-get($utilities, "color"),
+      (
+        values: map-merge(
+          map-get(map-get($utilities, "color"), "values"),
+          (
+            $all-colors
+          ),
+        ),
+      ),
+    ),
+    "background-color": map-merge(
+      map-get($utilities, "background-color"),
+      (
+        values: map-merge(
+          map-get(map-get($utilities, "background-color"), "values"),
+          (
+            $all-colors
+          ),
+        ),
+      ),
+    ),
+    "border-color": map-merge(
+      map-get($utilities, "border-color"),
+      (
+        values: map-merge(
+          map-get(map-get($utilities, "border-color"), "values"),
+          (
+            $all-colors
+          ),
+        ),
+      ),
+    ),
+  )
+);
+
+@import "node_modules/bootstrap/scss/utilities/api";
+@import './mybootstrap-icons.scss';
+
+@import "./node_modules/bootstrap/scss/_accordion.scss";
+@import "./node_modules/bootstrap/scss/_button-group.scss";
+@import "./node_modules/bootstrap/scss/_buttons.scss";
+@import "./node_modules/bootstrap/scss/_card.scss";
+@import "./node_modules/bootstrap/scss/_close.scss";
+@import "./node_modules/bootstrap/scss/_containers.scss";
+@import "./node_modules/bootstrap/scss/_dropdown.scss";
+@import "./node_modules/bootstrap/scss/_forms.scss";
+@import "./node_modules/bootstrap/scss/_grid.scss";
+@import "./node_modules/bootstrap/scss/_helpers.scss";
+@import "./node_modules/bootstrap/scss/_list-group.scss";
+@import "./node_modules/bootstrap/scss/_modal.scss";
+@import "./node_modules/bootstrap/scss/_nav.scss";
+@import "./node_modules/bootstrap/scss/_navbar.scss";
+@import "./node_modules/bootstrap/scss/_pagination.scss";
+@import "./node_modules/bootstrap/scss/_popover.scss";
+@import "./node_modules/bootstrap/scss/_reboot.scss";
+@import "./node_modules/bootstrap/scss/_root.scss";
+@import "./node_modules/bootstrap/scss/_tooltip.scss";
+@import "./node_modules/bootstrap/scss/_transitions.scss";
+@import "./node_modules/bootstrap/scss/_type.scss";
+
+
 
 .wrapper {
     display: flex;

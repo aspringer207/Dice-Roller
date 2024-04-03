@@ -1,4 +1,118 @@
-import { d4, d6, d8, d10, dpct, d12, d20 } from "./allpips.js";
+class Pip {
+    constructor(name, sides, min = 1, max = sides, step = 1) {
+      this.name = name;
+      this.sides = sides;
+      this.min = min;
+      this.max = parseInt(max);
+  
+      this.step = step;
+    }
+    faces() {
+      const myFaces = [];
+      let face = Number(this.min);
+      while (face <= this.max) {
+        myFaces.push(face);
+        face += this.step;
+      }
+      return myFaces;
+    }
+    rand() {
+      let x = Math.floor(Math.random() * this.sides);
+      let f = this.faces();
+      return f[x];
+    }
+    roll(ct = 1) {
+      const results = [];
+      for (let i = 0; i < ct; i++) {
+        results.push(this.rand());
+      }
+      return results;
+    }
+    rollAdv(ct = 1) {
+      const results = [];
+      for (let i = 0; i < ct; i++) {
+        let v1 = this.rand();
+        let v2 = this.rand();
+        let result = Math.max(v1, v2);
+        let discard = Math.min(v1, v2)
+        results.push([result, discard])
+      }
+      return results;
+    }
+    rollA(ct=1){
+      const results = [];
+      for (let i = 0; i < ct; i++) {
+        let v1 = this.rand();
+        let v2 = this.rand();
+        let result = Math.max(v1, v2);
+        let discard = Math.min(v1, v2)
+        results.push(result)
+      }
+      return results;
+  
+    }
+    fromArray(xName, ...arr) {
+      let mx = Math.max(arr);
+      let mn = Math.min(arr);
+      let si = arr.length;
+      const stepCheck = [];
+      for (let i = 0; i < si; i++) {
+        let j = i + 1;
+        stepCheck.push(arr[j] - arr[i]);
+      }
+      let st = Math.max(stepCheck) === Math.min(stepCheck) ? stepCheck[0] : NaN;
+  
+      return Pip(xName, mn, mx, si, st);
+    }
+  }
+
+
+const btnObj = {
+    "d4":{
+        pip: d4,
+        button: "d4-btn",
+        output: "d4-output",
+        roll: ()=>d4.roll()
+    },
+    "d6":{
+        pip: d6,
+        button: "d6-btn",
+        output: "d6-output",
+        roll: ()=>d6.roll()
+    },
+    "d8":{
+        pip: d8,
+        button: "d8-btn",
+        output: "d8-output",
+        roll: ()=>d8.roll()
+    },
+    "d10":{
+        pip: d10,
+        button: "d10-btn",
+        output: "d10-output",
+        roll: ()=>d10.roll()
+    },
+    "dpct":{
+        pip: dpct,
+        button: "dpct-btn",
+        output: "dpct-output",
+        roll: ()=>dpct.roll()
+    },
+    "d12":{
+        pip: d12,
+        button: "d12-btn",
+        output: "d12-output",
+        roll: ()=>d12.roll()
+    },
+    "d20":{
+        pip: d20,
+        button: "d20-btn",
+        output: "d20-output",
+        roll: ()=>d20.roll()
+    }
+}
+
+  
 const output = document.getElementById("batch-output");
 const inputD4 = document.getElementById("batch-d4-count");
 const inputD6 = document.getElementById("batch-d6-count");
