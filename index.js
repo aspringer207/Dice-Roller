@@ -272,6 +272,6 @@ batchInputD12.addEventListener("change", (event) => {
 batchInputD20.addEventListener("change", (event) => {
   updateD20S(event);
 });
-document.getElementById("batch-roll-btn").addEventListener("click", (event) => {
+document.getElementById("batch-roll-btn").addEventListener("click", () => {
   rollHandler();
 });
