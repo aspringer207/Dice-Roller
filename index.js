@@ -5,7 +5,8 @@ const batchInputD10 = document.getElementById("batch-d10-count");
 const batchInputPct = document.getElementById("batch-pct-count");
 const batchInputD12 = document.getElementById("batch-d12-count");
 const batchInputD20 = document.getElementById("batch-d20-count");
-
+const myTooltip = document.getElementById("discard-tooltip")
+const tooltip = new bootstrap.Tooltip(myTooltip, {boundary: document.body, offset: [10, 20]})
 class Pip {
     constructor(name, sides, min = 1, max = sides, step = 1) {
       this.name = name;
@@ -206,7 +207,15 @@ function d20Handler(btn) {
     document.getElementById(btn.output).value = btn.pip.roll();
   }
 }
-
+function handleTooltip(event){
+  console.log(tooltip)
+  tooltip.show()
+}
+document.getElementById("tooltip-badge").addEventListener("mouseover", ()=>{tooltip.show()})
+document.getElementById("tooltip-badge").addEventListener("mouseleave", ()=>{tooltip.hide()})
+document.getElementById("focus-ring").addEventListener("focusin", ()=>tooltip.show())
+document.getElementById("focus-ring").addEventListener("focusout", ()=>tooltip.hide())
+document.getElementById("tooltip-badge").addEventListener("click", ()=>{tooltip.toggle()})
 document.getElementById("advantage-opt").addEventListener("change", () => {
   state.adv = !state.adv;
   console.log(state.adv);

@@ -68,15 +68,19 @@
                     <label id="advantage-label" class="form-check-label" for="advantage-opt">Advantage</label>
                   </span>
                   <div class="input-group-text bg-red-700 .discard-label">
-                    <i class="bi bi-trash3" name="discard"></i>
-                    <span class="badge">
-                      <span class="tooltip">Discarded Roll</span>
-                    </span>
+                    <i class="bi bi-trash3 display-5" name="discard"></i>
+                    
                   </div>
                   <input readonly type="text" id="discard" class="bg-danger-subtle roll-output" />
-                  
+
                   <span class="input-group-text icon-label">
-                    <i class="bi bi-stars"></i></span>
+                    <a href="#" id="focus-ring" class="focus-ring-light">
+                      <span id="tooltip-badge" class="badge rounded-pill bg-indigo-700 p-2 d-flex">
+                        <i class="bi bi-question-circle stretched-link"></i>
+                        <span class="tooltip" data-bs-toggle="tooltip" id="discard-tooltip"
+                          data-bs-title="Discarded Roll"></span>
+                      </span>
+                    </a></span>
                 </div>
               </div>
             </div>
@@ -123,7 +127,8 @@
                   </button>
                   <span class="input-group-text">
                     <label for="quick-d8-output">Value:</label> </span><input id="quick-d8-output" readonly type="text"
-                    class="roll-output" /><span class="input-group-text icon-label"><i class="bi bi-diamond-half"></i></span>
+                    class="roll-output" /><span class="input-group-text icon-label"><i
+                      class="bi bi-diamond-half"></i></span>
                 </div>
               </div>
               <div class="flex-column flex-wrap col-6 quick-i-grp">

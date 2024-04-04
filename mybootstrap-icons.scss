@@ -52,7 +52,8 @@ $bootstrap-icons-map: (
     "square-half": "\f583",
     "triangle-half": "\f5e4",
     "star":"\f589",
-    "trash3":"\f78B"
+    "trash3":"\f78B",
+    "question-circle":"\F505"
 );
 
 @each $icon, $codepoint in $bootstrap-icons-map {

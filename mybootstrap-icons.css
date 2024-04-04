@@ -105,4 +105,8 @@
 
 .bi-trash3::before {
   content: "\f78b";
+}
+
+.bi-question-circle::before {
+  content: "\f505";
 }/*# sourceMappingURL=mybootstrap-icons.css.map */
