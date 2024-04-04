@@ -3,7 +3,8 @@
     "@babel/core": "^7.24.3",
     "bootstrap": "^5.3.3",
     "bootstrap-icons": "^1.11.3",
-    "sass": "^1.72.0"
+    "sass": "^1.72.0",
+    "webpack": "^5.91.0"
   },
   "devDependencies": {
     "@types/babel__core": "^7.20.5"
